@@ -52,13 +52,18 @@ $config = [
             'clients' => [
                 'google' => [
                     'class' => 'yii\authclient\clients\Google',
-                    'clientId' => 'google_client_id',
+                    'clientId' => 'starry-folder-148012',
                     'clientSecret' => 'google_client_secret',
                 ],
                 'facebook' => [
                     'class' => 'yii\authclient\clients\Facebook',
                     'clientId' => 'facebook_client_id',
                     'clientSecret' => 'секретный_ключ_facebook_client',
+                ],
+                'vkontakte' => [
+                    'class' => 'yii\authclient\clients\VKontakte',
+                    'clientId' => '7220046',
+                    'clientSecret' => 'digmJxwl2XdrBEurOaA0',
                 ],
             // и т.д.
             ],

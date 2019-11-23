@@ -9,6 +9,10 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\authclient\AuthAction;
+use app\models\Auth;
+use app\models\User;
+
 
 class SiteController extends Controller
 {
@@ -145,16 +149,16 @@ class SiteController extends Controller
                 $user = $auth->user;
                 Yii::$app->user->login($user);
             } else { // регистрация
-                if (isset($attributes['email']) && User::find()->where(['email' => $attributes['email']])->exists()) {
+                if (isset($attributes['email']) && \app\models\UserRecord::find()->where(['email' => $attributes['email']])->exists()) {
                     Yii::$app->getSession()->setFlash('error', [
                         Yii::t('app', "Пользователь с такой электронной почтой как в {client} уже существует, но с ним не связан. Для начала войдите на сайт использую электронную почту, для того, что бы связать её.", ['client' => $client->getTitle()]),
                     ]);
                 } else {
                     $password = Yii::$app->security->generateRandomString(6);
-                    $user = new User([
+                    $user = new \app\models\UserRecord([
                         'username' => $attributes['login'],
                         'email' => $attributes['email'],
-                        'password' => $password,
+                        'password_hash' => $password,
                     ]);
                     $user->generateAuthKey();
                     $user->generatePasswordResetToken();
