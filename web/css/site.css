@@ -113,3 +113,24 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.homesquare{
+    background: black;
+    color: white;
+    height: 25em;
+
+
+}
+
+.homesquare:hover{
+    text-decoration: none;
+    color: red;
+}
+
+.homesquare i
+{text-align: center;
+ font-size: 15em;
+     display: block; 
+ height: 100%; 
+ width: 100%;
+ margin-top: 25%
+}
