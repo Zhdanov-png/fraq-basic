@@ -1,6 +1,25 @@
 <div class="row">
     <div class="col-lg-4 col-md-4">
         <a href="#" class="thumbnail  homesquare">
+            <i class="material-icons">people</i>
+        </a>
+        
+    </div>
+    <div class="col-lg-4 col-md-4 ">
+        <a href="#" class="thumbnail  homesquare">
+             <i class="material-icons">group</i>
+        </a>
+        
+    </div>
+    <div class="col-lg-4 col-md-4 ">
+        <a href="#" class="thumbnail  homesquare">
+             <i class="material-icons">people_outline</i>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <a href="#" class="thumbnail  homesquare">
             <i class="glyphicon  glyphicon-picture"></i>
         </a>
         
